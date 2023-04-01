@@ -15,12 +15,12 @@
   background: #EAEAEA;
 }
 
-.nav__input, .nav__input-btn{
+.nav__input-text, .nav__input-btn{
   height: 35px;
   border-radius: 10px;
 }
 
-.nav__input{
+.nav__input-text{
   padding-left: 10px;
   min-width: 200px;
   width: 30%;

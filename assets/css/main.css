@@ -164,6 +164,7 @@ body{
   }
 }
 
+/* Media Query */
 @media(max-width: 440px) {
   .nav__input-text{
     width: 60%;

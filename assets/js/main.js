@@ -30,7 +30,7 @@ btn.addEventListener("click",() => {
 
     // Nome
     let nome = document.createElement('h1');
-    nome.innerHTML = "Nome " + dados.species.name;
+    nome.innerHTML = dados.species.name;
     pokemonDados.nome.innerHTML = '';
     pokemonDados.nome.appendChild(nome);
 
@@ -38,45 +38,45 @@ btn.addEventListener("click",() => {
     // For para o selecionamento de Atributos dos arrays
 
     // Habilidades      
-    pokemonDados.habilidades.innerHTML = '';
-    for(let i = 0; i < dados.abilities.length; i++){
+    pokemonDados.habilidades.innerHTML = '<h3>Habilidades</h3>';
+    dados.abilities.forEach(item => {
       let habilidades = document.createElement('p');
-      habilidades.innerHTML = "Habilidades " + dados.abilities[i].ability.name;
+      habilidades.innerHTML = item.ability.name;
       pokemonDados.habilidades.appendChild(habilidades);
-    }
+    });
     
     // Formas
-    pokemonDados.formas.innerHTML = '';
-    for(let i = 0; i < dados.forms.length; i++){
+    pokemonDados.formas.innerHTML = '<h3>Formas</h3>';
+    dados.forms.forEach(item => {
       let formas = document.createElement('p');
-      formas.innerHTML = "formas " + dados.forms[i].name;
+      formas.innerHTML = item.name;
       pokemonDados.formas.appendChild(formas);
-    }
+    });
 
     // Especies
-    pokemonDados.especie.innerHTML = '';
+    pokemonDados.especie.innerHTML = '<h3>Espécie</h3>';
     let especies = document.createElement('p');
-    especies.innerHTML =  "especies " + dados.species.name;
+    especies.innerHTML = dados.species.name;
     pokemonDados.especie.appendChild(especies);
 
     // Tipos
-    pokemonDados.tipo.innerHTML = '';
-    for(let i = 0; i < dados.types.length; i++){
+    pokemonDados.tipo.innerHTML = '<h3>Tipo</h3>';
+    dados.types.forEach(item => {
       let tipos = document.createElement('p');
-      tipos.innerHTML = "tipos " + dados.types[i].type.name;
+      tipos.innerHTML = item.type.name;
       pokemonDados.tipo.appendChild(tipos);
-    }
+    });
 
     // Experiencia
-    pokemonDados.experiencia.innerHTML = '';
+    pokemonDados.experiencia.innerHTML = '<h3>Experiência</h3>';
     let experiencias = document.createElement('p');
-    experiencias.innerHTML = "experiencia " + dados.base_experience;
+    experiencias.innerHTML = dados.base_experience;
     pokemonDados.experiencia.appendChild(experiencias);
 
     // Altura
-    pokemonDados.altura.innerHTML = '';
+    pokemonDados.altura.innerHTML = '<h3>Altura</h3>';
     let alturas = document.createElement('p');
-    alturas.innerHTML = "altura" + dados.height;
+    alturas.innerHTML = dados.height;
     pokemonDados.altura.appendChild(alturas);
   })
 	.catch((_) => {console.log(_)})

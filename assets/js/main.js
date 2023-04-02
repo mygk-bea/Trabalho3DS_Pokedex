@@ -24,7 +24,7 @@ btn.addEventListener("click",() => {
 
     // img
     let img = document.createElement('img');
-    img.setAttribute('src', dados.sprites.front_default);
+    img.setAttribute('src', dados.sprites.other["official-artwork"].front_default);
     pokemonDados.img.innerHTML = '';
     pokemonDados.img.appendChild(img);
 

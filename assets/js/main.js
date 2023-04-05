@@ -2,6 +2,14 @@
 const pokemon = document.getElementById("input-text");
 const btn = document.querySelector(".nav__input-btn");
 
+function spritesPokemon(json){
+  if(json.id <= 649) {
+    return json.sprites.versions["generation-v"]["black-white"].animated.front_default
+  } else {
+    return json.sprites.other["official-artwork"].front_default
+  }
+}
+
 btn.addEventListener("click",() => {
   const url = `https://pokeapi.co/api/v2/pokemon/${pokemon.value.toLowerCase()}`;
 
@@ -24,7 +32,7 @@ btn.addEventListener("click",() => {
 
     // img
     let img = document.createElement('img');
-    img.setAttribute('src', dados.sprites.other["official-artwork"].front_default);
+    img.setAttribute('src', spritesPokemon(dados));
     pokemonDados.img.innerHTML = '';
     pokemonDados.img.appendChild(img);
 

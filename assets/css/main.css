@@ -77,20 +77,21 @@ body{
 
 .content__pokemon-img{
   margin-left: 20px;
-  width: 90px;
+  width: 150px;
   height: 90px;
   border: 2px solid #CCC;
-  border-radius: 100%;
-  background: #FFF;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  background: #9dd6fc;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .header img{
-  height: 80px;
+  height: 85px;
 }
 
 .header h1{
   margin-right: 20px;
+  text-transform: capitalize;
   color: #FFF;
 }
 
